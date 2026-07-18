@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Madurai - The Temple City</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .crt-screen {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    background: radial-gradient(ellipse at center, #001a00 0%, #000500 100%);
+    border-radius: 20px;
+    box-shadow:
+      inset 0 0 60px rgba(0,255,0,0.3),
+      0 0 40px rgba(0,255,0,0.4);
+    overflow: hidden;
+    padding: 30px;
+    color: #33ff33;
+    text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
+  }
+
+  .crt-screen::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.25) 0px,
+      rgba(0,0,0,0.25) 1px,
+      transparent 2px,
+      transparent 3px
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .crt-screen::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .crt-screen {
+    animation: flicker 4s infinite;
+  }
+
+  @keyframes flicker {
+    0%   { opacity: 1; }
+    2%   { opacity: 0.85; }
+    4%   { opacity: 1; }
+    50%  { opacity: 1; }
+    52%  { opacity: 0.9; }
+    54%  { opacity: 1; }
+    100% { opacity: 1; }
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    margin-top: 0;
+    border-bottom: 1px solid #33ff33;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin-top: 30px;
+    color: #66ff66;
+  }
+
+  p, li {
+    line-height: 1.7;
+    font-size: 1.05em;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+
+  .blink {
+    animation: blink 1s step-start infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  .status {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #226622;
+    font-size: 0.95em;
+    color: #66ff66;
+  }
+</style>
+</head>
+<body>
+
+  <div class="crt-screen">
+    <div class="content">
+      <h1>&gt; MADURAI_</h1>
+      <p>Welcome to Madurai — one of the oldest continuously inhabited cities in India, located on the banks of the Vaigai River in Tamil Nadu.</p>
+
+      <h2>&gt; ABOUT THE CITY</h2>
+      <p>Madurai is often called the "Athens of the East" and is famous as a major center of Tamil culture, learning, and temple architecture. The city has a history spanning over 2,500 years and was once the capital of the Pandya Kingdom.</p>
+
+      <h2>&gt; MEENAKSHI AMMAN TEMPLE</h2>
+      <p>The heart of Madurai is the Meenakshi Amman Temple, dedicated to Goddess Meenakshi and Lord Sundareswarar. Known for its towering gopurams covered in thousands of colorful sculptures, it attracts millions of devotees and tourists every year.</p>
+
+      <h2>&gt; CULTURE & FOOD</h2>
+      <ul>
+        <li>Famous for Jigarthanda, a traditional cool drink</li>
+        <li>Home to the historic Thirumalai Nayakkar Mahal</li>
+        <li>Known for jasmine flowers (Madurai Malli)</li>
+        <li>Rich tradition of Tamil literature and Sangam-era history</li>
+      </ul>
+
+      <h2>&gt; QUICK FACTS</h2>
+      <ul>
+        <li>State: Tamil Nadu</li>
+        <li>River: Vaigai</li>
+        <li>Nickname: Temple City / Athens of the East</li>
+        <li>Famous for: Meenakshi Temple, Jigarthanda, Tamil culture</li>
+      </ul>
+
+      <div class="status">
+        STATUS: <span style="color:#33ff33;">● LIVE</span> <span class="blink">_</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
